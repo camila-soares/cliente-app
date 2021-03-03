@@ -1,0 +1,75 @@
+<h1 class="mt-4">Serviço Prestado </h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-bitem active">Consulta</li>
+</ol>
+<div class="cotainer">
+    <form>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="inputDescription">Descrição</label>
+                <input type="text" [(ngModel)]="description" 
+                name="description" id="inputDescription"
+                class="form-control">
+            </div>
+
+            <div class="col-md-6">
+                <label for="inputCliente">Clientes:</label>
+                <select class="form-control" 
+                [(ngModel)]="name" name="name">
+                <option value="">Selecione...</option>
+                <option *ngFor="let cliente of clientes" 
+                [value]="cliente.name">
+                    {{ cliente.name }}
+                </option>
+                </select>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+           <div class="col-md-12">
+               <button type="submit" class="btn btn-default" (click)="buscar()">
+                   <i class="fa fa-search"></i>Consultar
+               </button>
+            <div class="col-md-11">
+               <button class="btn btn-warning" routerLink="/servico-prestado/form"><i class="fa fa-plus"></i>
+                Novo
+               </button>
+            </div>
+           </div>
+        </div>
+
+        <!--div class="row">
+            <div class="col-md-2">
+               
+            </div>
+        </!--div-->
+        <br />
+        <div class="row">
+            <div class="alert alert-warning" role="alert" *ngIf="message">
+                {{ message }}
+            </div>
+            <div class="col-md-12">
+                <table class="table table-bordered table-hover" >
+                    <thead>
+                        <tr>
+                            <th>Cliente</th>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                            <th>Data de registro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let l of lista; let i = index;"> 
+                            <td>{{l.client.name}}</td>
+                            <td>{{l.description}}</td>
+                            <td>{{l.value}}</td>
+                            <td>{{l.date | date : "dd/MM/yyyy"}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+         </div>
+
+        
+    </form>
+</div>

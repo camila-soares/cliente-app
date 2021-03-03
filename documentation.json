@@ -1,0 +1,2810 @@
+{
+    "pipes": [],
+    "interfaces": [
+        {
+            "name": "Client",
+            "id": "interface-Client-d85d31d002958fd7578364be73aab894",
+            "file": "src/app/clientes/Page.ts",
+            "type": "interface",
+            "sourceCode": "export interface Page {\n    content: Array<Client>;\n    totalPages: number;\n    totalElements: number;\n    last: boolean;\n    size: number;\n    number: number;\n    sort?: any;\n    numberOfElements: number;\n    first: boolean;\n};\n\nexport interface Client {\n    id: number;\n    name: string;\n    cpf: string;\n    dataRegistration: number;\n};",
+            "properties": [
+                {
+                    "name": "cpf",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "dataRegistration",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                },
+                {
+                    "name": "id",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 150,
+            "methods": []
+        },
+        {
+            "name": "Page",
+            "id": "interface-Page-d85d31d002958fd7578364be73aab894",
+            "file": "src/app/clientes/Page.ts",
+            "type": "interface",
+            "sourceCode": "export interface Page {\n    content: Array<Client>;\n    totalPages: number;\n    totalElements: number;\n    last: boolean;\n    size: number;\n    number: number;\n    sort?: any;\n    numberOfElements: number;\n    first: boolean;\n};\n\nexport interface Client {\n    id: number;\n    name: string;\n    cpf: string;\n    dataRegistration: number;\n};",
+            "properties": [
+                {
+                    "name": "content",
+                    "type": "Array<Client>",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "first",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "last",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "number",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "numberOfElements",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "size",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "sort",
+                    "type": "any",
+                    "optional": true,
+                    "description": "",
+                    "line": 8
+                },
+                {
+                    "name": "totalElements",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "totalPages",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 150,
+            "methods": []
+        }
+    ],
+    "injectables": [
+        {
+            "name": "ClientesService",
+            "id": "injectable-ClientesService-eb0d7d26acaa310da11a4249722d8796",
+            "file": "src/app/clientes.service.ts",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "deleteClient",
+                    "args": [
+                        {
+                            "name": "cliente",
+                            "type": "Cliente"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<any>",
+                    "typeParameters": [],
+                    "line": 39,
+                    "jsdoctags": [
+                        {
+                            "name": "cliente",
+                            "type": "Cliente",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getClientById",
+                    "args": [
+                        {
+                            "name": "id",
+                            "type": "number"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<Cliente>",
+                    "typeParameters": [],
+                    "line": 31,
+                    "jsdoctags": [
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getClientes",
+                    "args": [
+                        {
+                            "name": "params",
+                            "type": "any",
+                            "optional": true
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<Cliente[]>",
+                    "typeParameters": [],
+                    "line": 17,
+                    "jsdoctags": [
+                        {
+                            "name": "params",
+                            "type": "any",
+                            "optional": true,
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getProductPage",
+                    "args": [
+                        {
+                            "name": "page",
+                            "type": ""
+                        },
+                        {
+                            "name": "size",
+                            "type": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<Cliente[]>",
+                    "typeParameters": [],
+                    "line": 27,
+                    "jsdoctags": [
+                        {
+                            "name": "page",
+                            "type": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "size",
+                            "type": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "salvar",
+                    "args": [
+                        {
+                            "name": "cliente",
+                            "type": "Cliente"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<Cliente>",
+                    "typeParameters": [],
+                    "line": 13,
+                    "jsdoctags": [
+                        {
+                            "name": "cliente",
+                            "type": "Cliente",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "updateClient",
+                    "args": [
+                        {
+                            "name": "cliente",
+                            "type": "Cliente"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<any>",
+                    "typeParameters": [],
+                    "line": 35,
+                    "jsdoctags": [
+                        {
+                            "name": "cliente",
+                            "type": "Cliente",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "description": "",
+            "sourceCode": "import { Injectable } from '@angular/core';\nimport { Cliente } from './clientes/clientes';\nimport  { HttpClient, HttpParams} from '@angular/common/http';\nimport { Observable } from 'rxjs';\nimport { environment } from '../environments/environment';\n@Injectable({\n  providedIn: 'root'\n})\nexport class ClientesService {\n  constructor(private http: HttpClient) { }\n  \n\n  salvar(cliente: Cliente) : Observable<Cliente> {\n    return this.http.post<Cliente>('http://localhost:8080/api/client', cliente);\n  }\n  \n  getClientes(params?: any) : Observable<Cliente[]>{\n    let httpParams = new HttpParams();\n    for (const key in params) {\n      if (params.hasOwnProperty(key) && params[key]) {\n        httpParams = httpParams.append(key, params[key].toString());\n      }\n    }\n    return this.http.get<Cliente[]>('http://localhost:8080/api/client', { params: httpParams});\n  }\n\n  getProductPage(page, size) : Observable<Cliente[]> {\n    return this.http.get<Cliente[]>(`http://localhost:8080/api/client?pageSize=${page}&pageNumber=${size}`);\n  }\n\n  getClientById(id: number) : Observable<Cliente>{\n    return this.http.get<any>(`http://localhost:8080/api/client/${id}`);\n  }\n\n  updateClient(cliente: Cliente)  : Observable<any>{\n    return this.http.put<Cliente>(`http://localhost:8080/api/client/${cliente.id}`, cliente);\n  }\n\n  deleteClient(cliente: Cliente) : Observable<any>{\n    return this.http.delete<any>(`http://localhost:8080/api/client/${cliente.id}`);\n  }\n\n\n  \n}\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [
+                    {
+                        "name": "http",
+                        "type": "HttpClient"
+                    }
+                ],
+                "line": 9,
+                "jsdoctags": [
+                    {
+                        "name": "http",
+                        "type": "HttpClient",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "type": "injectable"
+        },
+        {
+            "name": "ServicoPrestadoService",
+            "id": "injectable-ServicoPrestadoService-65abd8a20ddc43a721f810f4b17e474d",
+            "file": "src/app/servico-prestado.service.ts",
+            "properties": [
+                {
+                    "name": "apiUrl",
+                    "defaultValue": "environment.apiUrlBase + `/api/service`",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                }
+            ],
+            "methods": [
+                {
+                    "name": "salvar",
+                    "args": [
+                        {
+                            "name": "servico",
+                            "type": "ServicoPrestado"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<ServicoPrestado>",
+                    "typeParameters": [],
+                    "line": 14,
+                    "jsdoctags": [
+                        {
+                            "name": "servico",
+                            "type": "ServicoPrestado",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "description": "",
+            "sourceCode": "import { Observable } from 'rxjs';\nimport { ServicoPrestado } from './servico-prestado/ServicoPrestado';\nimport { Injectable } from '@angular/core';\nimport { HttpClient } from '@angular/common/http';\nimport { environment } from '../environments/environment';\n@Injectable({\n  providedIn: 'root'\n})\nexport class ServicoPrestadoService {\n\n  apiUrl: string = environment.apiUrlBase + `/api/service`;\n  constructor(private http: HttpClient) { }\n\n  salvar(servico: ServicoPrestado) : Observable<ServicoPrestado>{\n      return this.http.post<ServicoPrestado>(`${this.apiUrl}`, servico)\n  }\n}\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [
+                    {
+                        "name": "http",
+                        "type": "HttpClient"
+                    }
+                ],
+                "line": 11,
+                "jsdoctags": [
+                    {
+                        "name": "http",
+                        "type": "HttpClient",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "type": "injectable"
+        }
+    ],
+    "classes": [
+        {
+            "name": "AppPage",
+            "id": "class-AppPage-4ee91dad524760153d3c0f6f0014153c",
+            "file": "e2e/src/app.po.ts",
+            "type": "class",
+            "sourceCode": "import { browser, by, element } from 'protractor';\n\nexport class AppPage {\n  navigateTo() {\n    return browser.get(browser.baseUrl) as Promise<any>;\n  }\n\n  getTitleText() {\n    return element(by.css('app-root .content span')).getText() as Promise<string>;\n  }\n}\n",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "getTitleText",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 8
+                },
+                {
+                    "name": "navigateTo",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 4
+                }
+            ],
+            "indexSignatures": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        },
+        {
+            "name": "Cliente",
+            "id": "class-Cliente-03ace07726c98512b9c89a20170594e5",
+            "file": "src/app/clientes/clientes.ts",
+            "type": "class",
+            "sourceCode": "export class Cliente {\n    id:number;\n    name: string;\n    cpf: string;\n}",
+            "properties": [
+                {
+                    "name": "cpf",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "id",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "methods": [],
+            "indexSignatures": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        },
+        {
+            "name": "ServicoPrestado",
+            "id": "class-ServicoPrestado-9c5c892f6cb5b71d88f5d4c2fa1149b9",
+            "file": "src/app/servico-prestado/ServicoPrestado.ts",
+            "type": "class",
+            "sourceCode": "export class ServicoPrestado {\n    description: string;\n    value: string;\n    date:string;\n    idCliente: number;\n}",
+            "properties": [
+                {
+                    "name": "date",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "description",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "idCliente",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "value",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "methods": [],
+            "indexSignatures": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        }
+    ],
+    "directives": [],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-c31c7522d3f4c906a726d2d362450cc0",
+            "file": "src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "'clientes-app'",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngAfterViewInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 13
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit, AfterViewInit } from '@angular/core';\n\nimport jQuery from 'jquery'\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent implements AfterViewInit {\n  title = 'clientes-app';\n\n  ngAfterViewInit() {\n    (function($) {\n    \"use strict\";\n\n      // Add active state to sidbar nav links\n      var path = window.location.href; // because the 'href' property of the DOM element is the absolute path\n          $(\"#layoutSidenav_nav .sb-sidenav a.nav-link\").each(function() {\n              if (this.href === path) {\n                  $(this).addClass(\"active\");\n          }\n      });\n\n      // Toggle the side navigation\n      $(\"#sidebarToggle\").on(\"click\", function(e) {\n          e.preventDefault();\n          $(\"body\").toggleClass(\"sb-sidenav-toggled\");\n      });\n    })(jQuery);\n  }\n  \n}\n\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "th, td {\n    text-align: left;\n}",
+                    "styleUrl": "./app.component.css"
+                }
+            ],
+            "stylesData": "",
+            "implements": [
+                "AfterViewInit"
+            ],
+            "templateData": "\n<app-navbar></app-navbar>\n<div id=\"layoutSidenav\">\n  <app-sidebar></app-sidebar>\n  <div id=\"layoutSidenav_content\">\n    <main>\n      <div class=\"container-fluid\">\n        <router-outlet></router-outlet>\n      </div>\n      <footer class=\"py-4 bg-light mt-auto\">\n        <div class=\"container-fluid\">\n            <div class=\"d-flex align-items-center justify-content-between small\">\n                <div class=\"text-muted\">Copyright &copy; Meus Clientes 2020</div>\n                <div>\n                    <a href=\"#\">Privacy Policy</a>\n                    &middot;\n                    <a href=\"#\">Terms &amp; Conditions</a>\n                </div>\n            </div>\n        </div>\n    </footer>\n    </main>\n  </div>\n\n</div>\n"
+        },
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-642c6c4e474cd5a0ac760dfda26b2fc9",
+            "file": "src/stories/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-button",
+            "styleUrls": [
+                "./button.css"
+            ],
+            "styles": [],
+            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n   [ngStyle]=\"{ 'background-color': backgroundColor }\"\n >\n   {{ label }}\n </button>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "description": "<p>What background color to use</p>\n",
+                    "line": 26,
+                    "type": "string"
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Button'",
+                    "description": "<p>Button contents</p>\n",
+                    "line": 40
+                },
+                {
+                    "name": "primary",
+                    "defaultValue": "false",
+                    "description": "<p>Is this the principal call to action on the page?</p>\n",
+                    "line": 20
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'medium'",
+                    "description": "<p>How large should the button be?</p>\n",
+                    "line": 32,
+                    "type": "\"small\" | \"medium\" | \"large\""
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 46,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  >\n    {{ label }}\n  </button>`,\n  styleUrls: ['./button.css'],\n})\nexport default class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-button {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n.storybook-button--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n",
+                    "styleUrl": "./button.css"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 48
+                    }
+                }
+            }
+        },
+        {
+            "name": "ClientesFormComponent",
+            "id": "component-ClientesFormComponent-25fd5777993252c45f55a57319854ca2",
+            "file": "src/app/clientes/clientes-form/clientes-form.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-clientes-form",
+            "styleUrls": [
+                "./clientes-form.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./clientes-form.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "cliente",
+                    "type": "Cliente",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "errors",
+                    "type": "String[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "id",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                },
+                {
+                    "name": "success",
+                    "defaultValue": "false",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 26
+                },
+                {
+                    "name": "onSubmit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 40
+                },
+                {
+                    "name": "updateCliente",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 63
+                },
+                {
+                    "name": "voltar",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 73
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Observable } from 'rxjs';\n\nimport { ClientesService } from './../../clientes.service';\nimport { Cliente } from './../clientes';\nimport { Component, OnInit } from '@angular/core';\nimport { Router, ActivatedRoute, Params } from '@angular/router';\n@Component({\n  selector: 'app-clientes-form',\n  templateUrl: './clientes-form.component.html',\n  styleUrls: ['./clientes-form.component.css']\n})\nexport class ClientesFormComponent implements OnInit {\n\n  cliente: Cliente;\n  success: boolean = false;\n  errors: String[];\n  id: number;\n\n  constructor(private service: ClientesService, \n              private router: Router, \n              private activeRoute: ActivatedRoute) { \n      this.cliente = new Cliente();\n    \n  }\n\n  ngOnInit() {\n    let params : Observable<Params> = this.activeRoute.params\n\n    params.subscribe( urlParams => {\n      this.id = urlParams['id'];\n      if(this.id) {\n        this.service.getClientById(this.id)\n        .subscribe(response => this.cliente = response,\n        erroResponse => this.cliente = new Cliente()\n      );\n      }\n    })\n  }\n\n  onSubmit(){\n    if(this.id ){\n      this.service.updateClient(this.cliente)\n      .subscribe( \n        response => {\n          this.success = true;\n          this.errors = null;\n        }, erroResponse => {\n          this.errors = ['Erro ao atualizar'];\n        });\n    }else {\n      this.service.salvar(this.cliente)\n      .subscribe( response => {\n      this.success = true;\n      this.errors = null;\n    } , errorResponse => {\n      this.success = false;\n        this.errors = errorResponse.error.errors;\n      }\n    )\n    }\n  }\n\n  updateCliente() {\n    this.service.updateClient(this.cliente)\n    .subscribe( \n      response => {\n        this.errors = null;\n      }, erroResponse => {\n        this.errors = ['Erro ao atualizar'];\n      });\n  }\n\n  voltar() {\n    this.router.navigate(['/clientes-lista'])\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./clientes-form.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [
+                    {
+                        "name": "service",
+                        "type": "ClientesService"
+                    },
+                    {
+                        "name": "router",
+                        "type": "Router"
+                    },
+                    {
+                        "name": "activeRoute",
+                        "type": "ActivatedRoute"
+                    }
+                ],
+                "line": 17,
+                "jsdoctags": [
+                    {
+                        "name": "service",
+                        "type": "ClientesService",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "activeRoute",
+                        "type": "ActivatedRoute",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<h1 class=\"mt-4\">Clientes</h1>\n<ol class=\"breadcrumb mb-4\">\n    <li class=\"breadcrumb-item active\">{{ cliente.id ? 'Edição' : 'Cadastro'}}</li>\n</ol>\n<div class=\"container\">\n    <form #clienteForm=\"ngForm\" (ngSubmit)=\"onSubmit\"> \n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"alert alert-success\" role=\"alert\" *ngIf=\"success == true\">\n                    Cliente Salvo/Atualizado com sucesso!\n                </div>\n                <div class=\"alert alert-danger\" role=\"alert\" *ngFor=\"let error of errors\">\n                    {{ error }}\n                </div>\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6\">\n                <div class=\"form-group\">\n                    <label>Nome: *</label>\n                    <input type=\"text\" class=\"form-control\" \n                    [(ngModel)]=\"cliente.name\" name=\"name\" />\n                </div>\n            </div>\n            <div class=\"col-md-6\">\n                <div class=\"form-group\">\n                    <label>CPF: *</label>\n                    <input type=\"text\" class=\"form-control\" \n                    [(ngModel)]=\"cliente.cpf\" name=\"cpf\" />\n                </div>\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-3\">\n                <button type=\"submit\" class=\"btn btn-success\" (click)=\"onSubmit()\" *ngIf=\"!cliente.id\">\n                    <i class=\"fa fa-save\"></i>Salvar\n                </button>\n                <button type=\"submit\" class=\"btn btn-primary\" (click)=\"onSubmit()\" *ngIf=\"cliente.id\">\n                    <i class=\"fa fa-sync-alt\"></i>Atualizar\n                </button>\n\n                <button type=\"button\" class=\"btn btn-danger ml-1\" (click)=\"voltar()\">\n                    <i class=\"fa fa-arrow-alt-circle-left\"></i>Voltar\n                </button>\n            </div>\n        </div>\n    </form>\n</div>\n"
+        },
+        {
+            "name": "ClientesListaComponent",
+            "id": "component-ClientesListaComponent-1241e60d1f21e9bcc390039436749470",
+            "file": "src/app/clientes/clientes-lista/clientes-lista.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-clientes-lista",
+            "styleUrls": [
+                "./clientes-lista.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./clientes-lista.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "cliente",
+                    "type": "Cliente",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "clientes",
+                    "defaultValue": "[]",
+                    "type": "Cliente[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "clienteSelecionado",
+                    "type": "Cliente",
+                    "optional": false,
+                    "description": "",
+                    "line": 19
+                },
+                {
+                    "name": "contador",
+                    "defaultValue": "5",
+                    "type": "Number",
+                    "optional": false,
+                    "description": "",
+                    "line": 26
+                },
+                {
+                    "name": "cpf",
+                    "defaultValue": "''",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 22
+                },
+                {
+                    "name": "mensagemErro",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                },
+                {
+                    "name": "mensagemSucesso",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "name",
+                    "defaultValue": "''",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 21
+                },
+                {
+                    "name": "pag",
+                    "defaultValue": "1",
+                    "type": "Number",
+                    "optional": false,
+                    "description": "",
+                    "line": 25
+                },
+                {
+                    "name": "page",
+                    "type": "Page",
+                    "optional": false,
+                    "description": "",
+                    "line": 20,
+                    "modifierKind": [
+                        112
+                    ]
+                },
+                {
+                    "name": "pageNumber",
+                    "defaultValue": "0",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 23
+                },
+                {
+                    "name": "pageSize",
+                    "defaultValue": "10",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 24
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "changePage",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 78,
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "deletar",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 65
+                },
+                {
+                    "name": "getClientes",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 37
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 32
+                },
+                {
+                    "name": "novoCadastro",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 50
+                },
+                {
+                    "name": "pageProducts",
+                    "args": [
+                        {
+                            "name": "page",
+                            "type": ""
+                        },
+                        {
+                            "name": "size",
+                            "type": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 54,
+                    "jsdoctags": [
+                        {
+                            "name": "page",
+                            "type": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "size",
+                            "type": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "preparaCliente",
+                    "args": [
+                        {
+                            "name": "cliente",
+                            "type": "Cliente"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 61,
+                    "jsdoctags": [
+                        {
+                            "name": "cliente",
+                            "type": "Cliente",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { ClientesService } from './../../clientes.service';\nimport { Cliente } from './../clientes';\nimport { Component, OnInit } from '@angular/core';\nimport { Router, ActivatedRoute } from '@angular/router';\nimport { Page } from '../Page';\n\n@Component({\n  selector: 'app-clientes-lista',\n  templateUrl: './clientes-lista.component.html',\n  styleUrls: ['./clientes-lista.component.css']\n})\nexport class ClientesListaComponent implements OnInit {\n\n  clientes: Cliente[] = [];\n  cliente: Cliente;\n  mensagemSucesso: string;\n  mensagemErro : string;\n\n  clienteSelecionado: Cliente;\n  private page : Page;\n  name = '';\n  cpf = '';\n  pageNumber = 0;\n  pageSize = 10;\n  pag : Number = 1 ;\n  contador : Number = 5;\n  constructor(\n    private service : ClientesService, \n    private router: Router,\n    private activeRoute: ActivatedRoute) { }\n\n  ngOnInit() {\n    this.getClientes();\n    this.pageProducts(10, 0);\n  }\n\ngetClientes() {\n  let params = {};\n      params = {\n        name: this.name,\n        cpf: this.cpf,\n        pageSize: this.pageSize,\n        pageNumber: this.pageNumber,\n      };\n      console.log('PARAM', params)\n  this.service.getClientes(params)\n  .subscribe( response => this.clientes = response);\n}\n\nnovoCadastro() {\n  this.router.navigate(['/clientes-form'])\n}\n\n pageProducts(page, size){\n    this.service.getProductPage(page, size).subscribe(res => {\n      this.clientes = res;\n      console.log(this.clientes)\n    });\n  }\n\n  preparaCliente(cliente: Cliente) {\n    this.clienteSelecionado = cliente;\n  }\n\n  deletar() {\n    this.service\n    .deleteClient(this.clienteSelecionado)\n    .subscribe( \n      response => { this.mensagemSucesso = 'Cliente deletado com sucesso.'\n      this.ngOnInit();\n    },\n      erroResponse  => {this.mensagemErro = 'Ocorreu um erro ao deletar'}\n    )\n      \n   console.log(this.clienteSelecionado);\n  }\n\n  changePage(event){\n   this.pageProducts(event.page, event.size);\n  }\n\n  \n\n  \n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./clientes-lista.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [
+                    {
+                        "name": "service",
+                        "type": "ClientesService"
+                    },
+                    {
+                        "name": "router",
+                        "type": "Router"
+                    },
+                    {
+                        "name": "activeRoute",
+                        "type": "ActivatedRoute"
+                    }
+                ],
+                "line": 26,
+                "jsdoctags": [
+                    {
+                        "name": "service",
+                        "type": "ClientesService",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "activeRoute",
+                        "type": "ActivatedRoute",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<h1 class=\"mt-4\">Clientes</h1>\n<ol class=\"breadcrumb mb-4\">\n    <li class=\"breadcrumb-item active\">Consulta</li>\n</ol>\n<div class=\"container\">\n    <div class=\"col-md-12\">\n        <div class=\"alert alert-success\" role=\"alert\" *ngIf=\"mensagemSucesso\">\n           {{ mensagemSucesso }}\n        </div>\n        <div class=\"alert alert-danger\" role=\"alert\" *ngIf=\"mensagemErro\">\n            {{ mensagemErro }}\n        </div>\n    </div>\n    <div class=\"row\">\n        <div class=\"col-md-2\">\n            <button class=\"btn btn-warning\" (click)=\"novoCadastro()\"><i class=\"fa fa-plus\"></i>\n            Novo\n            </button>\n        </div>\n    </div>\n    <br />\n    <div class=\"row\">\n        <div class=\"col-md-12\">\n            <table class=\"table table-bordered table-hover\" >\n                <thead>\n                    <tr>\n                        <th>ID</th>\n                        <th>NOME</th>\n                        <th>CPF</th>\n                        <th>DATA DE CADASTRO</th>\n                        <th></th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr *ngFor=\"let cliente of clientes; let i = index;\"> \n                        <td>{{cliente.id}}</td>\n                        <td>{{cliente.name}}</td>\n                        <td>{{cliente.cpf}}</td>\n                        <td>{{cliente.dateRegistration | date : \"dd/MM/yyyy\"}}</td>\n                        <td> \n                             <button class=\"btn btn-neutral\" routerLink=\"/clientes-form/{{cliente.id}}\">\n                                <a><i class=\"fa fa-edit ml-2\"></i></a>\n                            </button>\n                            <button class=\"btn btn-neutral\" (click)=\"preparaCliente(cliente)\"\n                                data-toggle=\"modal\" data-target=\"#modalDelecao\">\n                                <i class=\"fa fa-trash ml-2\"></i>\n                            </button>\n                        </td>\n\n                      \n                    </tr>\n                </tbody>\n            </table>\n        </div>\n        <pagination [page]=\"page\" (paginationEvent)=changePage($event)></pagination>\n    </div>\n    <div id=\"modalDelecao\" class=\"modal fade\" role=\"dialog\">\n        <div class=\"modal-dialog\" >\n            <div class=\"modal-content\">\n                <div class=\"modal-header\">\n                    <h4>Confirmação</h4>\n                </div>\n\n                <div class=\"modal-body\"  *ngIf=\"clienteSelecionado\">\n                    Deseja exluir o cliente {{ clienteSelecionado.name }} ?\n                    \n                    <div class=\"modal-footer\">\n                            <button class=\"btn btn-success\" (click)=\"deletar()\" data-dismiss=\"modal\">Confirmar</button>\n                            <button class=\"btn btn-nutral\" data-dismiss=\"modal\">Cancelar</button>\n                    </div>\n                </div>\n        </div>\n    </div>\n    </div>\n</div>"
+        },
+        {
+            "name": "HeaderComponent",
+            "id": "component-HeaderComponent-246e2a69dc126a3bd76c6328dd3b93e2",
+            "file": "src/stories/header.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-header",
+            "styleUrls": [
+                "./header.css"
+            ],
+            "styles": [],
+            "template": "<header>    <div class=\"wrapper\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <storybook-button\n          *ngIf=\"user\"\n          size=\"small\"\n          (onClick)=\"onLogout.emit($event)\"\n          label=\"Log out\"\n        ></storybook-button>\n        <storybook-button\n          *ngIf=\"!user\"\n          size=\"small\"\n          (onClick)=\"onLogin.emit($event)\"\n          label=\"Log in\"\n        ></storybook-button>\n        <storybook-button\n          *ngIf=\"!user\"\n          primary\n          size=\"small\"\n          (onClick)=\"onCreateAccount.emit($event)\"\n          label=\"Sign up\"\n        ></storybook-button>\n      </div>\n    </div>\n  </header>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "user",
+                    "defaultValue": "null",
+                    "line": 53,
+                    "type": "unknown"
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onCreateAccount",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "line": 62,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogin",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "line": 56,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogout",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "line": 59,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-header',\n  template: `<header>\n    <div class=\"wrapper\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <storybook-button\n          *ngIf=\"user\"\n          size=\"small\"\n          (onClick)=\"onLogout.emit($event)\"\n          label=\"Log out\"\n        ></storybook-button>\n        <storybook-button\n          *ngIf=\"!user\"\n          size=\"small\"\n          (onClick)=\"onLogin.emit($event)\"\n          label=\"Log in\"\n        ></storybook-button>\n        <storybook-button\n          *ngIf=\"!user\"\n          primary\n          size=\"small\"\n          (onClick)=\"onCreateAccount.emit($event)\"\n          label=\"Sign up\"\n        ></storybook-button>\n      </div>\n    </div>\n  </header>`,\n  styleUrls: ['./header.css'],\n})\nexport default class HeaderComponent {\n  @Input()\n  user: unknown = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".wrapper {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 15px 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\nsvg {\n  display: inline-block;\n  vertical-align: top;\n}\n\nh1 {\n  font-weight: 900;\n  font-size: 20px;\n  line-height: 1;\n  margin: 6px 0 6px 10px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nbutton + button {\n  margin-left: 10px;\n}\n",
+                    "styleUrl": "./header.css"
+                }
+            ],
+            "stylesData": ""
+        },
+        {
+            "name": "HomeComponent",
+            "id": "component-HomeComponent-000c509243b37b4587a152f24a0c2321",
+            "file": "src/app/home/home.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-home",
+            "styleUrls": [
+                "./home.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./home.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-home',\n  templateUrl: './home.component.html',\n  styleUrls: ['./home.component.css']\n})\nexport class HomeComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./home.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<h1 class=\"mt-4\">Home</h1>\n<ol class=\"breadcrumb mb-4\">\n    <li class=\"breadcrumb-item active\">Bem-Vindo</li>\n</ol>\n"
+        },
+        {
+            "name": "NavbarComponent",
+            "id": "component-NavbarComponent-ed623c45b1c6725aa07b558e39b59242",
+            "file": "src/app/template/navbar/navbar.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-navbar",
+            "styleUrls": [
+                "./navbar.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./navbar.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-navbar',\n  templateUrl: './navbar.component.html',\n  styleUrls: ['./navbar.component.css']\n})\nexport class NavbarComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./navbar.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<nav class=\"sb-topnav navbar navbar-expand navbar-dark bg-dark\">\n    <a class=\"navbar-brand\" href=\"#\">Meus Clientes</a>\n    <button class=\"btn btn-link btn-sm order-1 order-lg-0\" id=\"sidebarToggle\" href=\"#\">\n        <i class=\"fas fa-bars\"></i>\n    </button>            \n</nav>\n"
+        },
+        {
+            "name": "PageComponent",
+            "id": "component-PageComponent-cca1a8911321fa17756ce90c90de65cc",
+            "file": "src/stories/page.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-page",
+            "styleUrls": [
+                "./page.css"
+            ],
+            "styles": [],
+            "template": "<article>    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"onLogout.emit($event)\"\n      (onLogin)=\"onLogin.emit($event)\"\n      (onCreateAccount)=\"onCreateAccount.emit($event)\"\n    ></storybook-header>\n    <section>\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://www.learnstorybook.com\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Learn Storybook\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\">\n          docs\n        </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "user",
+                    "defaultValue": "null",
+                    "line": 66,
+                    "type": "unknown"
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onCreateAccount",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "line": 75,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogin",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "line": 69,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogout",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "line": 72,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-page',\n  template: `<article>\n    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"onLogout.emit($event)\"\n      (onLogin)=\"onLogin.emit($event)\"\n      (onCreateAccount)=\"onCreateAccount.emit($event)\"\n    ></storybook-header>\n    <section>\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://www.learnstorybook.com\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Learn Storybook\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\">\n          docs\n        </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>`,\n  styleUrls: ['./page.css'],\n})\nexport default class PageComponent {\n  @Input()\n  user: unknown = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n\n// export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (\n//   <article>\n//     <Header user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />\n\n// );\n// Page.propTypes = {\n//   user: PropTypes.shape({}),\n//   onLogin: PropTypes.func.isRequired,\n//   onLogout: PropTypes.func.isRequired,\n//   onCreateAccount: PropTypes.func.isRequired,\n// };\n\n// Page.defaultProps = {\n//   user: null,\n// };\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "section {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 24px;\n  padding: 48px 20px;\n  margin: 0 auto;\n  max-width: 600px;\n  color: #333;\n}\n\nh2 {\n  font-weight: 900;\n  font-size: 32px;\n  line-height: 1;\n  margin: 0 0 4px;\n  display: inline-block;\n  vertical-align: top;\n}\n\np {\n  margin: 1em 0;\n}\n\na {\n  text-decoration: none;\n  color: #1ea7fd;\n}\n\nul {\n  padding-left: 30px;\n  margin: 1em 0;\n}\n\nli {\n  margin-bottom: 8px;\n}\n\n.tip {\n  display: inline-block;\n  border-radius: 1em;\n  font-size: 11px;\n  line-height: 12px;\n  font-weight: 700;\n  background: #e7fdd8;\n  color: #66bf3c;\n  padding: 4px 12px;\n  margin-right: 10px;\n  vertical-align: top;\n}\n\n.tip-wrapper {\n  font-size: 13px;\n  line-height: 20px;\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n\n.tip-wrapper svg {\n  display: inline-block;\n  height: 12px;\n  width: 12px;\n  margin-right: 4px;\n  vertical-align: top;\n  margin-top: 3px;\n}\n\n.tip-wrapper svg path {\n  fill: #1ea7fd;\n}\n",
+                    "styleUrl": "./page.css"
+                }
+            ],
+            "stylesData": ""
+        },
+        {
+            "name": "PaginationComponent",
+            "id": "component-PaginationComponent-8c6acfef67b6be76ae09b5ce5b3842c9",
+            "file": "src/app/pagination/pagination.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "pagination",
+            "styleUrls": [
+                "./pagination.component.css"
+            ],
+            "styles": [],
+            "template": "<div class=\"pagination-container\" *ngIf=\"page && page.totalPages > 0\">\n    <nav aria-label=\"Page navigation\">\n        <ul class=\"pagination\">\n\n            <li class=\"page-item\" [ngClass]=\"page.first ? 'disabled' : '' \">\n                <a  class=\"page-link\" *ngIf=\"page.first\" aria-label=\"Previous\">\n                    <span aria-hidden=\"true\">&laquo;</span>\n                </a>\n                <a  class=\"page-link\" style=\"cursor: pointer\" *ngIf=\"!page.first\" (click)=\"changePage(page.number-1)\" aria-label=\"Previous\">\n                    <span aria-hidden=\"true\">&laquo;</span>\n                </a>\n            </li>\n\n            <li class=\"page-item\" *ngFor=\"let pageAux of page.pages\" [ngClass]=\"(pageAux == page.number) ? 'active' : ''\"  [ngClass]=\"i == page.number ? 'active' : '' \">\n                <a class=\"page-link\" style=\"cursor: pointer\" (click)=\"changePage(pageAux)\">{{pageAux+1}}</a>\n            </li>\n\n            <li class=\"page-item\" [ngClass]=\"page.last ? 'disabled' : '' \">\n                <a  class=\"page-link\" *ngIf=\"page.last\" aria-label=\"Next\">\n                    <span aria-hidden=\"true\">&raquo;</span>\n                </a>\n                <a  class=\"page-link\" style=\"cursor: pointer\" *ngIf=\"!page.last\" (click)=\"changePage(page.number+1)\" aria-label=\"Next\">\n                    <span aria-hidden=\"true\">&raquo;</span>\n                </a>\n            </li>\n            <select (ngModelChange)=\"changePage()\" [(ngModel)]=\"size\" class=\"custom-select\">\n                  <option value=\"5\">5</option>\n                  <option value=\"10\" selected>10</option>\n                  <option value=\"15\">15</option>\n                  <option value=\"20\">20</option>\n            </select>\n        </ul>\n    </nav>\n</div>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "page",
+                    "line": 45,
+                    "type": "any"
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "paginationEvent",
+                    "defaultValue": "new EventEmitter()",
+                    "line": 50,
+                    "type": "EventEmitter<any>"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "page",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 44,
+                    "modifierKind": [
+                        112
+                    ]
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "10",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 43,
+                    "modifierKind": [
+                        112
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "changePage",
+                    "args": [
+                        {
+                            "name": "page",
+                            "type": "",
+                            "optional": true
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 56,
+                    "jsdoctags": [
+                        {
+                            "name": "page",
+                            "type": "",
+                            "optional": true,
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 54
+                },
+                {
+                    "name": "setPagetion",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 62
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';\n\n@Component({\n  selector: 'pagination',\n  template: `\n  <div class=\"pagination-container\" *ngIf=\"page && page.totalPages > 0\">\n      <nav aria-label=\"Page navigation\">\n          <ul class=\"pagination\">\n              \n              <li class=\"page-item\" [ngClass]=\"page.first ? 'disabled' : '' \">\n                  <a  class=\"page-link\" *ngIf=\"page.first\" aria-label=\"Previous\">\n                      <span aria-hidden=\"true\">&laquo;</span>\n                  </a>\n                  <a  class=\"page-link\" style=\"cursor: pointer\" *ngIf=\"!page.first\" (click)=\"changePage(page.number-1)\" aria-label=\"Previous\">\n                      <span aria-hidden=\"true\">&laquo;</span>\n                  </a>\n              </li>\n  \n              <li class=\"page-item\" *ngFor=\"let pageAux of page.pages\" [ngClass]=\"(pageAux == page.number) ? 'active' : ''\"  [ngClass]=\"i == page.number ? 'active' : '' \">\n                  <a class=\"page-link\" style=\"cursor: pointer\" (click)=\"changePage(pageAux)\">{{pageAux+1}}</a>\n              </li>\n  \n              <li class=\"page-item\" [ngClass]=\"page.last ? 'disabled' : '' \">\n                  <a  class=\"page-link\" *ngIf=\"page.last\" aria-label=\"Next\">\n                      <span aria-hidden=\"true\">&raquo;</span>\n                  </a>\n                  <a  class=\"page-link\" style=\"cursor: pointer\" *ngIf=\"!page.last\" (click)=\"changePage(page.number+1)\" aria-label=\"Next\">\n                      <span aria-hidden=\"true\">&raquo;</span>\n                  </a>\n              </li>\n              <select (ngModelChange)=\"changePage()\" [(ngModel)]=\"size\" class=\"custom-select\">\n                    <option value=\"5\">5</option>\n                    <option value=\"10\" selected>10</option>\n                    <option value=\"15\">15</option>\n                    <option value=\"20\">20</option>\n              </select>\n          </ul>\n      </nav>\n  </div>`,\n  styleUrls:['./pagination.component.css']\n})\nexport class PaginationComponent implements OnInit {\n    private size: number = 10;\n    private page; \n    @Input(\"page\") public set value(page : any){\n        if(!page) return;\n        this.page = page;\n        this.setPagetion();\n    }\n    @Output() public  paginationEvent : EventEmitter<any> = new EventEmitter();\n\n    constructor() { }\n\n    ngOnInit() {}\n\n    changePage(page?){\n        setTimeout(()=>{\n            this.paginationEvent.emit({page: page? page : 0, size: this.size} );\n        });\n    }\n\n    setPagetion(){\n        let pages = new Array<number>();\n        let inc =  (this.page.number - 2) <= 0 ? (4 - this.page.number) : 2;\n        let dec =  (this.page.number + 2) >= this.page.totalPages ? (5 - (this.page.totalPages - this.page.number)) : 2;\n        let inicio = (this.page.number - dec) <= 0 ? 0 : (this.page.number - dec);\n        let fim = (this.page.number + inc) < this.page.totalPages ? (this.page.number + inc) : (this.page.totalPages - 1);\n        for(let i = inicio; i<= fim; i++){\n            pages.push(i);\n        }\n        this.page.pages = pages;\n    }\n}\n\n\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".pagination-container{\n    display: flex;\n    align-items: center;\n    flex-direction: column;\n}",
+                    "styleUrl": "./pagination.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 50
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "accessors": {
+                "value": {
+                    "name": "value",
+                    "setSignature": {
+                        "name": "value",
+                        "type": "void",
+                        "args": [
+                            {
+                                "name": "page",
+                                "type": "any"
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 45,
+                        "jsdoctags": [
+                            {
+                                "name": "page",
+                                "type": "any",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "name": "ServicoPrestadoFormComponent",
+            "id": "component-ServicoPrestadoFormComponent-baa77031e43161a119e6c79b07bc4347",
+            "file": "src/app/servico-prestado/servico-prestado-form/servico-prestado-form.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-servico-prestado-form",
+            "styleUrls": [
+                "./servico-prestado-form.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./servico-prestado-form.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "clientes",
+                    "defaultValue": "[]",
+                    "type": "Cliente[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "errors",
+                    "type": "String[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                },
+                {
+                    "name": "mensagemErro",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 19
+                },
+                {
+                    "name": "mensagemSucesso",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 18
+                },
+                {
+                    "name": "service",
+                    "type": "ServicoPrestado",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "success",
+                    "defaultValue": "false",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "gelAllClientes",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 29
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 25
+                },
+                {
+                    "name": "onSubmit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 34
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { ServicoPrestadoService } from './../../servico-prestado.service';\nimport { ServicoPrestado } from './../ServicoPrestado';\nimport { ClientesService } from './../../clientes.service';\nimport { Cliente } from './../../clientes/clientes';\nimport { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-servico-prestado-form',\n  templateUrl: './servico-prestado-form.component.html',\n  styleUrls: ['./servico-prestado-form.component.css']\n})\nexport class ServicoPrestadoFormComponent implements OnInit {\n\n  clientes: Cliente[] = [];\n  service: ServicoPrestado;\n  success:boolean = false;\n  errors: String[];\n  mensagemSucesso: string;\n  mensagemErro : string;\n\n  constructor(private serviceCliente : ClientesService, private servicoPrestadoService: ServicoPrestadoService) { \n    this.service = new ServicoPrestado();\n  }\n\n  ngOnInit() {\n    console.log(this.gelAllClientes());\n  }\n\n  gelAllClientes() {\n    this.serviceCliente.getClientes()\n    .subscribe( resonse => this.clientes = resonse)\n  }\n      \n  onSubmit(){\n    this.servicoPrestadoService.salvar(this.service)\n    .subscribe( response => {\n      this.success = true; \n      this.errors = null;\n      this.service = new ServicoPrestado();\n       }, \n       erroResponse => {\n         this.success= false;\n         this.errors = erroResponse.error.errors;\n        });\n  \n  } \n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./servico-prestado-form.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [
+                    {
+                        "name": "serviceCliente",
+                        "type": "ClientesService"
+                    },
+                    {
+                        "name": "servicoPrestadoService",
+                        "type": "ServicoPrestadoService"
+                    }
+                ],
+                "line": 19,
+                "jsdoctags": [
+                    {
+                        "name": "serviceCliente",
+                        "type": "ClientesService",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "servicoPrestadoService",
+                        "type": "ServicoPrestadoService",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<h1 class=\"mt-4\">Serviço Prestado </h1>\n<ol class=\"breadcrumb mb-4\">\n    <li class=\"breadcrumb-bitem active\">Novo</li>\n</ol>\n<div class=\"container\">\n    <div class=\"col-md-12\">\n        <div class=\"alert alert-success\" role=\"alert\" *ngIf=\"success == true\">\n           Serviço Salvo com sucesso!\n        </div>\n        <div class=\"alert alert-danger\" role=\"alert\" *ngFor=\"let erro of errors\">\n            {{ erro }}\n        </div>\n    </div>\n    <form #form=\"ngForm\" (submit)=\"onSubmit()\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"form-group\">\n                    <label for=\"\">Cliente: *</label>\n                    <select class=\"form-control\" \n                        [ngModelOptions]=\"{standalone: true}\"\n                        [(ngModel)]=\"service.idCliente\">\n                        <option value=\"\">Selecione...</option>\n                        <option *ngFor=\"let cliente of clientes\" \n                        [ngValue]=\"cliente.id\">\n                            {{ cliente.name }}\n                        </option>\n                    </select>\n                </div>\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"form-group\">\n                    <label>Descrição:</label>\n                        <input class=\"form-control\" \n                        [(ngModel)]=\"service.description\"\n                         type=\"text\" name=\"description\" \n                         id=\"description\"/>\n                    </div>\n\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-6\">\n                <div class=\"form-group\">\n                    <label>Valor:</label>\n                        <input class=\"form-control\" \n                        [(ngModel)]=\"service.value\"\n                         type=\"text\" name=\"value\" \n                         id=\"value\"/>\n                </div>\n            </div>\n\n                <div class=\"col-md-6\">\n                    <div class=\"form-group\">\n                        <label>Data:</label>\n                            <input class=\"form-control\" \n                            [(ngModel)]=\"service.date\"\n                             type=\"date\" name=\"date\" \n                             id=\"date\"/>\n                    </div>\n                </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-md-3\">\n                <button type=\"submit\" class=\"btn btn-success\">\n                    <i class=\"fa fa-save\"></i> Salvar\n                </button>\n            </div>\n        </div>\n    </form>\n</div>"
+        },
+        {
+            "name": "ServicoPrestadoListComponent",
+            "id": "component-ServicoPrestadoListComponent-d500e8263d9911114596d82225e49545",
+            "file": "src/app/servico-prestado/servico-prestado-list/servico-prestado-list.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-servico-prestado-list",
+            "styleUrls": [
+                "./servico-prestado-list.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./servico-prestado-list.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "clientes",
+                    "defaultValue": "[]",
+                    "type": "Cliente[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                },
+                {
+                    "name": "description",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "consultar",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 26
+                },
+                {
+                    "name": "gelAllClientes",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 21
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 17
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { ClientesService } from './../../clientes.service';\nimport { Component, OnInit } from '@angular/core';\nimport { Cliente } from 'src/app/clientes/clientes';\n\n@Component({\n  selector: 'app-servico-prestado-list',\n  templateUrl: './servico-prestado-list.component.html',\n  styleUrls: ['./servico-prestado-list.component.css']\n})\nexport class ServicoPrestadoListComponent implements OnInit {\n  clientes: Cliente[] = [];\n  name: string;\n  description: string;\n\n  constructor(private service : ClientesService) { }\n\n  ngOnInit() {\n    console.log(this.gelAllClientes())\n  }\n\n  gelAllClientes() {\n    this.service.getClientes()\n    .subscribe( resonse => this.clientes = resonse)\n    console.log(this.clientes)\n  }\n  consultar() {\n    console.log(this.description, this.name)\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./servico-prestado-list.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [
+                    {
+                        "name": "service",
+                        "type": "ClientesService"
+                    }
+                ],
+                "line": 13,
+                "jsdoctags": [
+                    {
+                        "name": "service",
+                        "type": "ClientesService",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<h1 class=\"mt-4\">Serviço Prestado </h1>\n<ol class=\"breadcrumb mb-4\">\n    <li class=\"breadcrumb-bitem active\">Consulta</li>\n</ol>\n<div class=\"cotainer\">\n    <form>\n        <div class=\"row\">\n            <div class=\"col-md-6\">\n                <label for=\"inputDescription\">Descrição</label>\n                <input type=\"text\" [(ngModel)]=\"description\" \n                name=\"description\" id=\"inputDescription\"\n                class=\"form-control\">\n            </div>\n\n            <div class=\"col-md-6\">\n                <label for=\"inputCliente\">Clientes:</label>\n                <select class=\"form-control\" \n                [(ngModel)]=\"name\" name=\"name\">\n                <option value=\"\">Selecione...</option>\n                <option *ngFor=\"let cliente of clientes\" \n                [value]=\"cliente.name\">\n                    {{ cliente.name }}\n                </option>\n                </select>\n            </div>\n        </div>\n        <br/>\n        <div class=\"row\">\n           <div class=\"col-md-3\">\n               <button type=\"submit\" class=\"btn btn-default\" (click)=\"consultar()\">\n                   <i class=\"fa fa-search\"></i>Consultar\n               </button>\n           </div>\n        </div>\n\n        \n    </form>\n</div>"
+        },
+        {
+            "name": "SidebarComponent",
+            "id": "component-SidebarComponent-bac8882e6aa5c93936c63adc4611efcf",
+            "file": "src/app/template/sidebar/sidebar.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-sidebar",
+            "styleUrls": [
+                "./sidebar.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./sidebar.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-sidebar',\n  templateUrl: './sidebar.component.html',\n  styleUrls: ['./sidebar.component.css']\n})\nexport class SidebarComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./sidebar.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div id=\"layoutSidenav_nav\">\n    <nav class=\"sb-sidenav accordion sb-sidenav-dark\" id=\"sidenavAccordion\">\n        <div class=\"sb-sidenav-menu\">\n            <div class=\"nav\">\n                <div class=\"sb-sidenav-menu-heading\">Sistema</div>\n                <a class=\"nav-link\" routerLink=\"/home\">\n                    <div class=\"sb-nav-link-icon\">\n                        <i class=\"fas fa-tachometer-alt\"></i>\n                    </div>\n                    Home\n                </a>\n                <div class=\"sb-sidenav-menu-heading\">Cadastro</div>\n                <a class=\"nav-link\" routerLink=\"/clientes-lista\">\n                    <div class=\"sb-nav-link-icon\">\n                        <i class=\"fas fa-columns\"></i>\n                    </div>\n                    Clientes\n                </a>\n                <a class=\"nav-link\" routerLink=\"/servico-prestado-lista\">\n                    <div class=\"sb-nav-link-icon\">\n                        <i class=\"fas fa-money\"></i>\n                    </div>\n                    Serviços\n                </a>\n            </div>\n        </div>\n        <div class=\"sb-sidenav-footer\">\n            <div class=\"small\">Logged in as:</div>\n            Start Bootstrap\n        </div>\n    </nav>\n</div>"
+        },
+        {
+            "name": "SimpleButtonComponent",
+            "id": "component-SimpleButtonComponent-2ed8acfaa2b00ef08a5d06cde9221544",
+            "file": "projects/storybook-ui/src/lib/simple-button/simple-button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ui-simple-button",
+            "styleUrls": [],
+            "styles": [
+                ""
+            ],
+            "template": "<button>{{text}}</button>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "text",
+                    "defaultValue": "'clique aqui'",
+                    "line": 10
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit, Input } from '@angular/core';\n\n@Component({\n  selector: 'ui-simple-button',\n  template: `<button>{{text}}</button>`,\n  styles: [``]\n})\nexport class SimpleButtonComponent  {\n\n @Input() text = 'clique aqui';\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "\n"
+        }
+    ],
+    "modules": [
+        {
+            "name": "AppModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": [
+                        {
+                            "name": "ClientesService"
+                        },
+                        {
+                            "name": "ServicoPrestadoService"
+                        }
+                    ]
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        },
+                        {
+                            "name": "HomeComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "AppRoutingModule"
+                        },
+                        {
+                            "name": "ClientesModule"
+                        },
+                        {
+                            "name": "ServicoPrestadoModule"
+                        },
+                        {
+                            "name": "SimpleButtonModule"
+                        },
+                        {
+                            "name": "TemplateModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppRoutingModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "ClientesModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "ClientesFormComponent"
+                        },
+                        {
+                            "name": "ClientesListaComponent"
+                        },
+                        {
+                            "name": "PaginationComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "ClientesRoutingModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "ClientesFormComponent"
+                        },
+                        {
+                            "name": "ClientesListaComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "ClientesRoutingModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "ServicoPrestadoModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "ServicoPrestadoFormComponent"
+                        },
+                        {
+                            "name": "ServicoPrestadoListComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "ServicoPrestadoRoutingModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "ServicoPrestadoFormComponent"
+                        },
+                        {
+                            "name": "ServicoPrestadoListComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "ServicoPrestadoRoutingModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "SimpleButtonModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "SimpleButtonComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "SimpleButtonComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "TemplateModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "NavbarComponent"
+                        },
+                        {
+                            "name": "SidebarComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "NavbarComponent"
+                        },
+                        {
+                            "name": "SidebarComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "context",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/test.ts",
+                "type": "",
+                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "context",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/storybook-ui/src/test.ts",
+                "type": "",
+                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "type": "object",
+                "defaultValue": "{\n  production: true\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "type": "object",
+                "defaultValue": "{\n  production: false,\n  apiUrlBase: 'http://localhost:8080'\n}"
+            },
+            {
+                "name": "Large",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "LoggedIn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "LoggedIn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "LoggedOut",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "LoggedOut",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "require",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/test.ts",
+                "type": "any"
+            },
+            {
+                "name": "require",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/storybook-ui/src/test.ts",
+                "type": "any"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Small",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "type": "Story<Button>",
+                "defaultValue": "(args: Button) => ({\n  component: Button,\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "type": "Story<Header>",
+                "defaultValue": "(args: Header) => ({\n  component: Header,\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "type": "Story<Page>",
+                "defaultValue": "(args: Page) => ({\n  component: Page,\n  props: args,\n})"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/test.ts",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/test.ts",
+                    "type": "any"
+                }
+            ],
+            "projects/storybook-ui/src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/storybook-ui/src/test.ts",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/storybook-ui/src/test.ts",
+                    "type": "any"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true\n}"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "type": "object",
+                    "defaultValue": "{\n  production: false,\n  apiUrlBase: 'http://localhost:8080'\n}"
+                }
+            ],
+            "src/stories/Button.stories.ts": [
+                {
+                    "name": "Large",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Small",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "type": "Story<Button>",
+                    "defaultValue": "(args: Button) => ({\n  component: Button,\n  props: args,\n})"
+                }
+            ],
+            "src/stories/Header.stories.ts": [
+                {
+                    "name": "LoggedIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "LoggedOut",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "type": "Story<Header>",
+                    "defaultValue": "(args: Header) => ({\n  component: Header,\n  props: args,\n})"
+                }
+            ],
+            "src/stories/Page.stories.ts": [
+                {
+                    "name": "LoggedIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "LoggedOut",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "type": "Story<Page>",
+                    "defaultValue": "(args: Page) => ({\n  component: Page,\n  props: args,\n})"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
+    "routes": {
+        "name": "<root>",
+        "kind": "module",
+        "className": "AppModule",
+        "children": [
+            {
+                "name": "routes",
+                "filename": "src/app/app-routing.module.ts",
+                "module": "AppRoutingModule",
+                "children": [
+                    {
+                        "path": "home",
+                        "component": "HomeComponent"
+                    }
+                ],
+                "kind": "module"
+            },
+            {
+                "name": "routes",
+                "filename": "src/app/clientes/clientes-routing.module.ts",
+                "module": "ClientesRoutingModule",
+                "children": [
+                    {
+                        "path": "clientes-form",
+                        "component": "ClientesFormComponent"
+                    },
+                    {
+                        "path": "clientes-form/:id",
+                        "component": "ClientesFormComponent"
+                    },
+                    {
+                        "path": "clientes-lista",
+                        "component": "ClientesListaComponent"
+                    }
+                ],
+                "kind": "module"
+            },
+            {
+                "name": "routes",
+                "filename": "src/app/servico-prestado/servico-prestado-routing.module.ts",
+                "module": "ServicoPrestadoRoutingModule",
+                "children": [
+                    {
+                        "path": "servico-prestado-form",
+                        "component": "ServicoPrestadoFormComponent"
+                    },
+                    {
+                        "path": "servico-prestado-lista",
+                        "component": "ServicoPrestadoListComponent"
+                    }
+                ],
+                "kind": "module"
+            }
+        ]
+    },
+    "coverage": {
+        "count": 2,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "e2e/src/app.po.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "AppPage",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/storybook-ui/src/lib/simple-button/simple-button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SimpleButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/storybook-ui/src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "context",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/storybook-ui/src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "require",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/clientes.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "ClientesService",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/clientes/Page.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Client",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/clientes/Page.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Page",
+                "coveragePercent": 0,
+                "coverageCount": "0/10",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/clientes/clientes-form/clientes-form.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ClientesFormComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/10",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/clientes/clientes-lista/clientes-lista.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ClientesListaComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/21",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/clientes/clientes.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "Cliente",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/home.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HomeComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/pagination/pagination.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PaginationComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/9",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/servico-prestado.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "ServicoPrestadoService",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/servico-prestado/ServicoPrestado.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "ServicoPrestado",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/servico-prestado/servico-prestado-form/servico-prestado-form.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ServicoPrestadoFormComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/11",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/servico-prestado/servico-prestado-list/servico-prestado-list.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ServicoPrestadoListComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/template/navbar/navbar.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NavbarComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/template/sidebar/sidebar.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SidebarComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.prod.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Large",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Small",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedIn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedOut",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedIn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedOut",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 83,
+                "coverageCount": "5/6",
+                "status": "very-good"
+            },
+            {
+                "filePath": "src/stories/header.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HeaderComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/page.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PageComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "context",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "require",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}
