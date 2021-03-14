@@ -15,8 +15,18 @@ import { ClientesService } from '../../src/app/clientes.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ServicoPrestadoModule } from './servico-prestado/servico-prestado.module';
 import { LoginComponent } from './login/login.component';
-import { LayoutComponent } from './layout/layout.component'
+import { LayoutComponent } from './layout/layout.component';
+import {Amplify } from 'aws-amplify';
 
+Amplify.configure({
+    Auth:{
+      mandatorySignIn:true,
+      region: 'us-east-1',
+      userPoolId: 'us-east-1_0CNO3ctC7',
+      userPoolWebClientId: '19qmshnekfuv1obg9rfa1dupok',
+      authenticationFlowType:'Client credentials'
+    }
+  });
 @NgModule({
   declarations: [
     AppComponent,

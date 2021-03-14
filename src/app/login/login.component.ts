@@ -2,7 +2,7 @@ import { AuthService } from './../auth.service';
 import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { User } from './user';
-
+import { Auth } from 'aws-amplify';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -19,6 +19,23 @@ export class LoginComponent {
   errors: String[];
 
   constructor(private router: Router, private authservice: AuthService) { }
+
+ async loginWithCognito() {
+   try {
+     let user = await Auth.signIn(this.username.toString(), this.password.toString());
+     console.log("USER",user)
+     console.log('Autenticado para usuario=' + this.username + 'senha=' + this.password + 'login result==' + user);
+     let tokens = user.signInUserSession;
+     if( tokens != null){
+       console.log('usuario autenticado');
+       this.router.navigate(['/home']);
+
+     }
+   } catch (error) {
+     console.log(error);
+     alert('Falha na authenticacao');
+   }
+  }
 
   onSubmit() {
 

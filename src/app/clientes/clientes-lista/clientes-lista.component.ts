@@ -48,7 +48,7 @@ getClientes() {
 }
 
 novoCadastro() {
-  this.router.navigate(['/clientes- form'])
+  this.router.navigate(['/clientes/form'])
 }
 
  pageProducts(page, size){
